@@ -139,7 +139,7 @@ MonoBehaviour:
   _oneAtATime: 1
   _registerTime: 0
   _forceMode: 2
-  _force: 8
+  _force: 30
   _transformReference: {fileID: 400000}
   _targetRigidbody: {fileID: 5400000}
 --- !u!135 &13500000
@@ -164,6 +164,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: _events.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _force
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
