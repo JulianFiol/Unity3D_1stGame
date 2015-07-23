@@ -61,7 +61,8 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 400006}
+  - 224: {fileID: 22418564}
+  - 222: {fileID: 22298032}
   m_Layer: 10
   m_Name: PlatformOriginalLocation
   m_TagString: Untagged
@@ -92,7 +93,7 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children:
   - {fileID: 400000}
-  m_Father: {fileID: 400006}
+  m_Father: {fileID: 22418564}
   m_RootOrder: 0
 --- !u!4 &400004
 Transform:
@@ -104,21 +105,8 @@ Transform:
   m_LocalPosition: {x: 89, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400006}
+  - {fileID: 22418564}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
---- !u!4 &400006
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 400002}
-  m_Father: {fileID: 400004}
   m_RootOrder: 0
 --- !u!23 &2300002
 MeshRenderer:
@@ -249,7 +237,7 @@ MonoBehaviour:
   _repeatTimeBounded: 0
   _oneAtATime: 1
   _registerTime: 1
-  _teleportTransform: {fileID: 400006}
+  _teleportTransform: {fileID: 0}
   _applyRotation: 1
   _resetVelocityOfRigidBodies: 1
   _resetAngularVelocityOfRigidBodies: 1
@@ -280,13 +268,61 @@ MonoBehaviour:
   _registerTime: 1
   _targetRigidbody: {fileID: 5400000}
   _changeToKinematic: 1
+--- !u!222 &22298032
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+--- !u!224 &22418564
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400002}
+  m_Father: {fileID: 400004}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: -.5}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 34d95022fe8788346af03d3c858aea4b, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 12fa6d68706d546bb97f50c7b7ae5b18, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Color.r
+      value: .933823526
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.g
+      value: .192257807
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.b
+      value: .192257807
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100004}
