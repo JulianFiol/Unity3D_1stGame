@@ -1,0 +1,671 @@
+###################################################################
+Cours OpenClassrooms : Réalisez votre premier jeu vidéo avec Unity
+###################################################################
+
+#################################################
+Partie 1 QUIZZ /10
+#################################################
+
+------------------------
+Question 1 - Good answer
+------------------------
+Sur quelle plateforme parmi les suivantes ne peut-on pas exporter notre jeu avec Unity ?
+iPad
+Android Phone
+iPhone
+[Well done, you got it right] Symbian Phone
+Mac / OSX
+PC / Windows
+
+Symbian OS était un système d’exploitation très utilisé dans les téléphones construits par Nokia jusqu’en 2010. Il n’a cependant pas pu faire face à la popularité de ses concurrents depuis l’avènement des smartphones. C’est en partie une des raisons qui a poussé Unity à ne pas proposer d’export pour celui-ci.
+
+------------------------
+Question 2 - Good answer
+------------------------
+Sous quel système d’exploitation ne peut-on pas utiliser l’éditeur Unity ?
+Windows 8
+Windows 7
+Windows XP
+Mac OSX
+[Well done, you got it right] iOS
+
+En effet, iOS est un système d’exploitation dédié à l’iPad, l’iPhone et l’iPod d’Apple. L’éditeur Unity n’est pour l’instant disponible que sur Mac OSX et toutes les versions de Microsoft Windows depuis XP. Nous pouvons noter qu’il est également possible d’utiliser Unity sur Linux (après quelques manipulations non triviales...)    
+
+------------------------
+Question 3 - Good answer
+------------------------
+Lequel de ces jeux est réalisé avec Unity ? 
+[Well done, you got it right] DeadCore
+Mirror’s Edge
+Portal 2
+
+DeadCore est le seul parmi ces trois jeux à être réalisé avec Unity.    
+
+------------------------
+Question 4 - Good answer
+------------------------
+À quelle fréquence doit-on généralement recalculer l’image à afficher dans un jeu vidéo sur ordinateur ? 
+24 fois par seconde
+[Well done, you got it right] 60 fois par seconde
+200 fois par seconde
+
+Il s’agissait de 60 fois par seconde pour produire 60 images par seconde ! En effet, il s’agit également de la fréquence de rafraichissement la plus répandue des écrans pour ordinateurs de bureau (60Hz). Cette fréquence est nécessaire pour que l’œil humain ait une impression de mouvement fluide.    
+
+------------------------
+Question 5 - Good answer
+------------------------
+Quel type de jeu allons-nous réaliser dans ce cours ?    
+[Well done, you got it right] Un jeu de plateforme en vue subjective
+Un jeu de plateforme en vue de côté
+Un jeu de stratégie temps réel
+Un jeu en ligne massivement multijoueurs
+
+Pour ce cours, nous nous contenterons d’un jeu de plateforme en vue subjective.    
+
+------------------------
+Question 6 - Good answer
+------------------------
+Lequel parmi ces outils n’est pas traditionnellement utilisé pour réaliser un jeu vidéo ?
+Unity
+CryEngine
+Unreal Development Kit
+[Well done, you got it right] Microsoft Excel
+
+Quelques personnes on pu s'efforcer à réaliser des jeux au sein même du tableur de Microsoft, mais en général ce dernier n’est pas un premier choix pour réaliser un jeu vidéo...
+
+------------------------
+Question 7 - Good answer
+------------------------
+Qu’est-ce qu’Angry Bots ? 
+Un jeu dans lequel des oiseaux sont en guerre avec des cochons
+[Well done, you got it right] Un des projets de démonstration d’Unity
+Des jouets pour enfants mettant en scène des combats de robots
+
+Angry Bots est en effet un des projets de démonstration mis en avant par Unity (à ne pas confondre avec Angry Birds de Rovio !). Pour information, un jeu dérivé d’Angry Birds, à savoir Bad Piggies, a été réalisé avec Unity !
+
+------------------------
+Question 8 - Good answer
+------------------------
+À quoi sert le bouton play dans Unity ?    
+À lancer le jeu
+[Well done, you got it right] À lancer une simulation de la scène en cours d’édition
+À lire une video
+
+Un jeu vidéo peut être composé de nombreuses scènes, le bouton play nous permet de simuler le déroulement de la scène en cours d’édition.
+
+------------------------
+Question 9 - Good answer
+------------------------
+Qu’est-ce que l’Asset Store ?
+Un magasin d’application pour iOS
+Un magasin d’application pour Android
+[Well done, you got it right] Un espace de vente et partage de contenu dédié à la réalisation de jeux vidéo avec Unity
+
+Une des grandes forces d’Unity est de proposer cet outil par le biais duquel des artistes peuvent distribuer de manière gratuite ou payante leurs créations, des développeurs leurs outils ou encore des entreprises leurs extensions d’Unity. Il devient ainsi très facile de compenser un manque de compétence spécifique au sein d’une équipe !    
+
+------------------------
+Question 10 - Good answer
+------------------------
+Lequel parmi ces quatre outils doit-on utiliser pour déplacer des objets dans une scène ?
+  Les différents outils de manipulation d’objets de l’éditeur Unity
+
+A : La main
+[Well done, you got it right] B : La croix formée de flèches horizontales et verticales
+C : Les deux flèches courbées
+D : Le rectangle dont quatre flèches partent en diagonales depuis ses angles
+
+Il s’agit en effet de la réponse B. L’outil C sert à effectuer des rotations sur les objets, l’outil D des changements d’échelle et enfin l’outil A à déplacer le point de vue d’édition de la scène.    
+
+
+
+#################################################
+Partie 2 ACTIVITE /13
+#################################################
+
+Import dans un projet et chargement de la scène principale /2
+- 2 : Le fichier s'importe sans erreur, la scène principale est présente et se charge sans problème.
+- 1 : Le fichier s'importe, mais vous ne trouvez pas de scène principale à charger.
+- 0 : Erreur à l'importation
+Construction de la scène à partir de prefabs /3
+- 3 : La scène n'est constituée que d'instances de prefabs (à l'exception peut-être de la lumière directionnelle).
+- 2 : La plupart des GameObjects sont des instances de prefabs.
+- 1 : Il y a des instances de prefabs, mais elles sont minoritaires.
+- 0 : Aucune instance de prefab n'est utilisée ou alors seulement pour le First Person Controller.
+Présence d'une seule caméra dans la scène /1
+- 1 : Le seul composant Camera présent sur les GameObjects de la scène est celui du First Person Controller.
+- 0 : Il y a plusieurs GameObjects avec un composant Camera dans la scène sans que cela ne soit justifié.
+Parcours du joueur /3
+- 3 : Il existe plusieurs chemins différents pour aller du point de départ au point d'arrivée. Dans l'un et/ou dans l'autre, le joueur doit faire preuve d'agilité et/ou de réflexion.
+- 2 : Un seul chemin existe dans lequel le joueur doit faire preuve d'agilité et/ou de réflexion.
+- 1 : Un seul chemin existe, et il n'y a aucun challenge pour le joueur.
+- 0 : On ne peut pas se rendre du point de départ au point d'arrivée.
+Temps de parcours à la première tentative /2
+- 2 : 1 minute ou plus.
+- 1 : Entre 20 secondes et 1 minute.
+- 0 : Moins de 20 secondes.
+Clarté du répertoire d'assets /2
+- 2 : Tous les assets (prefab et Scene) sont rangés par catégorie dans des répertoires aux noms explicites.
+- 1 : Quelques assets sont classés dans des répertoires, mais pas en totalité.
+- 0 : Les assets sont mélangés à la racine de l'onglet Project.
+
+
+
+#################################################
+Partie 2 QUIZZ /10
+#################################################
+
+------------------------
+Question 1 - Good answer
+------------------------
+Quel est l’onglet vous permettant d’explorer l’ensemble des ressources nécessaires à la création de votre jeu ?
+[Well done, you got it right] Project
+Hierarchy
+Scene
+Game
+Inspector
+
+C’est dans l’onglet Project que se retrouveront tous vos fichiers de scènes, textures, scripts, sons, etc. nécessaires à la construction de votre jeu.
+
+------------------------    
+Question 2 - Good answer
+------------------------
+Quel est l’onglet vous permettant de simuler à n’importe quel instant ce qu’est censé voir votre joueur ?
+Project
+Hierarchy
+Scene
+[Well done, you got it right] Game
+Inspector
+
+Dans l’onglet Game se retrouvent fusionnées toutes les informations recueillies par les multiples caméras disposées dans la scène selon un ordre prédéterminé. Nous pourrions l’appeler également « fenêtre de rendu temps réel ».    
+
+------------------------
+Question 3 - Good answer
+------------------------
+Quel est l’onglet vous permettant de voir le nom de tous les GameObjects présents dans votre scène et les relations de parenté entre ces derniers ?
+Project
+[Well done, you got it right] Hierarchy
+Scene
+Game
+Inspector
+
+L’onglet Hierarchy est une liste dynamique de tous les GameObjects présent à un instant donné dans votre scène. De plus, sélectionner un objet dans cette liste le sélectionnera également dans l’onglet Scene !
+
+------------------------
+Question 4 - Good answer
+------------------------
+Quel est l’onglet vous permettant de positionner dans l’espace des GameObjects ainsi que de les manipuler et d’explorer en mode camera libre un niveau donné de votre jeu ?
+Project
+Hierarchy
+[Well done, you got it right] Scene
+Game
+Inspector
+
+C’est dans l'onglet Scene que vous effectuerez le plus clair de vos positionnements et manipulations d’objets. Vous pourrez également y explorer chacune de vos scènes et créerez des environnements 3D immersifs.
+
+------------------------
+Question 5 - Good answer
+------------------------
+À quoi cela sert-il de laisser la touche Ctrl (sous Windows) ou Command (sous OSX) enfoncée durant le déplacement d’un objet selon un axe ?
+[Well done, you got it right] À le déplacer par cran de 1 unité
+À le positionner selon une grille magnétique
+À lui faire subir une rotation
+À changer l’échelle de l’objet
+
+Maintenir la touche Ctrl (sous Windows) ou Command (sous OSX) permet en effet de déplacer par cran de 1 unité les GameObjects présents dans votre scène de jeu. Par exemple, si je souhaite déplacer selon l’axe X, en laissant Ctrl (sous Windows) ou Command (sous OSX) enfoncé, un GameObject dont la coordonnée X initiale est 2.4, alors je ne pourrais le déplacer que sur les coordonnées 1.4, 3.4, 4.4, 5.4, etc.
+
+------------------------
+Question 6 - Good answer
+------------------------
+Qu’est-ce qu’un prefab ?
+Un GameObject bleu dans l’onglet Hierarchy
+[Well done, you got it right] Un prototype de GameObject et de ses fils
+Un type particulier de texture
+Une lettre construite avec des cubes
+
+Un prefab est avant tout un fichier dans lequel nous allons stocker une configuration type des composants d’un GameObject ainsi que de ses fils. Cela nous permettra de créer des instances de ce prefab dans nos scènes (ce sont les instances qui apparaîtront en effet en bleu dans l’onglet Hierarchy). Ces dernières seront liées à notre prefab de sorte que si une modification est apportée au prefab parent, toutes les instances au travers de toutes nos scènes subissent aussi la modification.
+
+------------------------
+Question 7 - Good answer
+------------------------
+Qu’est-ce qui est toléré dans ce cours, mais peu recommandé pour la production d’un vrai jeu ?
+De laisser la touche Ctrl (sous Windows) ou Command (sous OSX) enfoncée lorsque l’on déplace un objet
+[Well done, you got it right] D’utiliser des valeurs de redimensionnement non-uniformes pour nos GameObjects
+D’utiliser des prefabs
+D’utiliser des valeurs de rotations non uniformes sur chacun des axes pour nos GameObjects
+
+Comme nous n’allons pas créer nous-mêmes nos formes 3D, nous allons redimensionner les formes primitives proposées par Unity pour subvenir à nos besoins. Cependant, si ce redimensionnement n’est pas uniforme, cela peut avoir un impact sur les performances et être générateur de bugs, surtout si cela est combiné avec des relations de parenté entre GameObjects et des rotations. À utiliser donc avec modération.    
+
+------------------------
+Question 8 - Good answer
+------------------------
+À quoi sert le bouton play dans Unity ?
+À lancer le jeu
+[Well done, you got it right] À lancer une simulation de la scène en cours d’édition
+À lire une vidéo
+
+Un jeu vidéo peut être composé de nombreuses scènes, le bouton play nous permet de simuler le déroulement de la scène en cours d’édition.    
+
+------------------------
+Question 9 - Good answer
+------------------------
+Pour stopper la simulation d’une scène de jeu, que faut-il faire ?
+Appuyer sur le bouton pause
+[Well done, you got it right] Appuyer sur le bouton lecture une deuxième fois
+Appuyer sur le bouton image suivante
+
+Il faut bien faire attention à cela, lorsque vous souhaitez couper votre simulation, il est nécessaire d’appuyer une seconde fois sur le bouton lecture et non d’appuyer sur le bouton pause. La simulation en pause est toujours active, et tous les changements que vous apporteriez à votre scène pourraient se retrouver annulés lors de l’arrêt réel de la simulation.    
+
+------------------------
+Question 10 - Good answer
+------------------------
+Pour diminuer la taille du First Person Controller utilisé pour naviguer dans notre environnement, qu’a-t-il été nécessaire de faire ?
+Modifier la propriété Scale du composant Transform
+Modifier la propriété Maximum Y du composant Mouse Look
+Déplacer vers le bas la caméra
+[Well done, you got it right] Modifier la propriété Height du composant Character Controller
+
+Effectivement, ici pour pouvoir passer sous l’arche, il a été nécessaire de modifier la propriété Height du composant Character Controller se trouvant sur notre GameObject First Person Controller. Déplacer vers le bas la caméra n’aurait fait que modifier le point de vue. Modifier la propriété Scale du composant Transform aurait été possible, mais cela aurait été moins élégant.    
+
+
+
+#################################################
+Partie 3  ACTIVITE /11
+#################################################
+
+Chargement du projet et de la scène principale /2
+- 2 : Le projet s'ouvre sans erreur, la scene principale est présente et se charge sans problème.
+- 1 : Le projet s'ouvre mais vous ne trouvez pas de scène principale à charger.
+- 0 : Erreur à l'ouverture du projet ou à la décompression de l'archive.
+Construction des pièges à partir de Prefabs /2
+- 2 : Les pièges sont majoritairement des instances de Prefabs.
+- 1 : Il y a des instances de Prefabs, mais elles sont minoritaires.
+- 0 : Aucune instance de Prefabs n'est utilisé pour les pièges
+Fin(s) de partie / réapparition du joueur /2
+- 2 : Le texte GAME OVER ou équivalent s'affiche lorsque le joueur touche le lieu d'arrivée et le joueur se voit téléporté lorsqu'il tombe ou touche un projectile/objet dangereux.
+- 1 : L'une ou l'autre des fonctionnalités est manquante.
+- 0 : Aucune des fonctionnalités n'est présente.
+Nombre de pièges originaux /3
+- 3 : 3 pièges originaux sont rencontrés sur le parcours.
+- 2 : 2 pièges originaux sont rencontrés sur le parcours.
+- 1 : 1 piège original est rencontré sur le parcours.
+- 0 : Aucun piège original n'est rencontré sur le parcours.
+Utilisation des bumpers /1
+- 1 : Des bumpers sont rencontrés le long du parcours.
+- 0 : Aucun bumper n'est rencontré sur aucun des chemins.
+Utilisation du déclenchement de la chute d'objet /1
+- 1 : Des chutes d'objets sont déclenchés le long du parcours.
+- 0 : Aucune chute d'objet n'est rencontrée le long du parcours.
+
+
+
+#################################################
+Partie 3 QUIZZ /10
+#################################################
+
+------------------------
+Question 1 - Good answer
+------------------------
+Pour être en mesure d’appliquer des forces (comme la gravité) à un GameObject, quel type de composant doit-on lui ajouter ?
+Un Collider
+[Well done, you got it right] Un Rigidbody
+Un Mesh Renderer
+Un Mesh Filter
+Un Character Controller
+
+Le Rigidbody est un composant qui permet de soumettre un GameObject aux lois imposées par le monde de la physique telle que la gravité, ou encore les forces appliquées par les autres objets. On indique grâce à ce RigidBody que la boîte de collision utilisée par le GameObject représente un corps indéformable, doté d’une masse.    
+
+------------------------
+Question 2 - Good answer
+------------------------
+Quel type de Collider (boîte de collision) standard n’est pas proposé par Unity ?
+Box Collider
+Sphere Collider
+Mesh Collider
+Capsule Collider
+[Well done, you got it right] Cylinder Collider
+
+Unity propose comme boîtes de collisions prédéfinies des formes primitives (Sphere, Box, Capsule), quelques spécifiques (Terrain, Wheel), et enfin le Mesh Collider, pouvant prendre l’aspect de n’importe quelle forme 3D. Bien entendu, il est préférable pour des raisons de performance d’utiliser les premiers et le moins possible le Mesh Collider.    
+
+------------------------
+Question 3 - Good answer
+------------------------
+Le visuel d’un objet correspond-il forcément à la forme de sa boîte de collision ? 
+Oui
+[Well done, you got it right] Non
+
+Non, la forme de la boîte de collision d’un objet ne correspond pas forcément son visuel. Tout d’abord, pour des objets où le visuel est très détaillé, cela ne serait pas souhaitable pour des raisons de performances, mais de plus en plus souvent, on souhaite utiliser des boîtes de collisions de taille différente pour servir le gameplay : plus petite pour l’entité contrôlée par le joueur (par exemple dans des jeux de type shoot them up) ou plus grandes dans le cas de boutons sur lesquels cliquer ou appuyer, etc.
+
+------------------------
+Question 4 - Good answer
+------------------------
+Sur lequel de ces GameObjects sera-t-il souhaitable d’ajouter un composant Rigidbody avec la propriété IsKinematic cochée ?
+Une bille de flipper se faisant projeter dans différentes directions et soumise à la gravité
+Un effet visuel de pluie
+Une zone de détection statique activant un piège au passage du joueur
+[Well done, you got it right] Une plateforme mobile se déplaçant selon une trajectoire définie et sur laquelle le joueur peut sauter
+
+Effectivement, la plateforme mobile bouge et interagira avec le joueur, il lui faut donc un RigidBody. De plus, cette dernière devra empêcher le joueur de tomber mais ne devra pas subir son poids, nous devrons donc cocher la propriété IsKinematic.    
+
+------------------------
+Question 5 - Good answer
+------------------------
+À quoi sert un Hinge Joint ?
+[Well done, you got it right] À réaliser une liaison de type charnière entre deux GameObjects équipés de composants Rigidbody
+À relier deux Colliders entre eux
+À soumettre un GameObject à la gravité
+À réaliser une liaison de type glissière entre deux GameObjects équipés de composants Rigidbody
+
+En effet, nous pouvons utiliser un Hinge Joint pour réaliser une interaction de type balancier de pendule entre deux GameObjects équipés de RigidBody.    
+
+------------------------
+Question 6 - Good answer
+------------------------
+À quoi servent les PhysX Materials ?
+À permettre à deux objets de rentrer en collision
+À simuler un corps souple
+[Well done, you got it right] À déterminer les propriétés physiques des surfaces des boîtes de collisions
+À ajouter des reflets à une surface
+
+Grâce aux PhysX Materials, nous pourrons spécifier des propriétés de friction ou de rebond, permettant de simuler des surfaces très différentes telles que de la glace, du goudron ou encore du caoutchouc.    
+
+------------------------
+Question 7 - Good answer
+------------------------
+Comment faire pour classer les objets selon différents types et indiquer au moteur physique si ces derniers peuvent interagir ensemble ou non ?
+En assignant des tags aux GameObjects et en manipulant la matrice de collisions
+[Well done, you got it right] En assignant des layers aux GameObjects et en manipulant la matrice de collisions
+En assignant des Hinge Joints aux GameObjects et en manipulant des Physic Materials
+En assignant des layers aux GameObjects et en manipulant des Hinge Joints
+
+Nous pouvons regrouper les types d’objets en leur assignant des layers spécifiques pouvant être définis dans le menu Tags and Layers. Ensuite, à l’aide de la matrice de collisions accessible dans Edit->Project Settings->Physics, nous pouvons définir quel type peut interagir avec quel autre.    
+
+------------------------
+Question 8 - Good answer
+------------------------
+Pour réaliser une zone de détection fixe, quels composants sont nécessaires ?    
+Un Collider avec la propriété IsTrigger non cochée et un RigidBody avec la propriété IsKinematic non cochée
+Un Collider avec la propriété IsTrigger non cochée et un RigidBody avec la propriété IsKinematic cochée
+Un Collider avec la propriété IsTrigger cochée et un RigidBody avec la propriété IsKinematic non cochée
+Un Collider avec la propriété IsTrigger cochée et un RigidBody avec la propriété IsKinematic cochée
+[Well done, you got it right] Un Collider avec la propriété IsTrigger cochée et sans RigidBody
+
+Une zone de détection ne doit pas empêcher le joueur de se déplacer à l’intérieur, nous utiliserons donc un Collider avec la propriété IsTrigger cochée. La zone étant fixe, un RigidBody n’est pas nécessaire.    
+
+------------------------
+Question 9 - Good answer
+------------------------
+Par défaut, quelle est la valeur de la force appliquée sur l’axe Y à tout objet soumis à la gravité ?
+9.81
+[Well done, you got it right] -9.81
+98.1
+-98.1
+
+Cette valeur correspond à celle de la gravité terrestre, à savoir -9.81 Newtons, représentée habituellement par le symbole g. Elle est modifiable en allant dans le menu Edit->Project Settings->Physics.
+
+------------------------
+Question 10 - Good answer
+------------------------
+Quel est le nom du moteur physique 3D utilisé dans Unity ?
+[Well done, you got it right] Le NVidia PhysX Engine
+Le Havok
+Euphoria
+Le Shuriken Particle System
+
+Unity embarque en son sein le moteur physique développé par NVidia : le PhysX Engine.    
+
+
+
+#################################################
+Partie 4 QUIZZ /10
+#################################################
+
+------------------------
+Question 1 - Good answer
+------------------------
+Que se passera-t-il si l’on change la position d’une Directional Light dans une scène ?
+Les ombres changeront de place
+Certains objets ne seront plus éclairés
+[Well done, you got it right] Cela n’aura aucun effet visuel
+Certaines faces des objets ne seront plus éclairées
+
+Une Directional Light symbolise un soleil, c’est-à-dire une source lumineuse située infiniment loin et envoyant des rayons lumineux parallèles. Ainsi, aucun changement visuel n’aura lieu si l'on se contente de la déplacer dans notre scène. Pour changer l’orientation des rayons lumineux, il suffit d’appliquer une rotation à notre Directional Light.    
+
+------------------------
+Question 2 - Good answer
+------------------------
+Combien de Directional Lights peuvent projeter des ombres dynamiques simultanément dans la version gratuite d’Unity ?
+0
+[Well done, you got it right] 1
+2
+3
+
+Dans la version gratuite d’Unity, nous ne pouvons utiliser que le mode de rendu Forward Rendering, qui ne peut proposer à la fois qu’une seule lumière directionnelle comme source d’ombres dynamiques. Cependant, avec la version Pro d’Unity, il aurait été possible de passer en mode de rendu Deferred Lightning, qui nous aurait permis de lever cette limitation.    
+
+------------------------
+Question 3 - Good answer
+------------------------
+Comment s’appelle le moteur de lightmapping utilisé dans Unity ?
+Shuriken
+[Well done, you got it right] Beast
+PhysX
+
+Unity inclut en effet le moteur de lightmapping Beast proposé par Autodesk.
+
+------------------------
+Question 4 - Good answer
+------------------------
+Pour qu’un GameObject puisse être pris en compte dans le lightmapping, que faut-il faire ?
+Lui assigner un composant Rigidbody
+Lui assigner un Collider
+Lui assigner un Particle System
+[Well done, you got it right] Que sa propriété Static soit cochée
+
+Le lightmapping consiste à précalculer de manière précise l’illumination des objets immobiles (statiques) dans une scène. Il est donc nécessaire d’indiquer à Unity quels objets seront mobiles (dynamiques), et ceux qui resteront figés (statiques), pour qu’il puisse réaliser cette tâche.    
+
+------------------------
+Question 5 - Good answer
+------------------------
+Pour qu’une particule, une fois émise par un Particle System, ne subisse pas les déplacements du GameObject de ce dernier, que devez-vous faire ?
+[Well done, you got it right] Sélectionner la valeur World pour la propriété Simulation Space
+Augmenter la valeur de la propriété Duration du système de particules
+Changer le taux d’émission du système de particules
+Changer la forme de l’émission du système de particules
+
+La propriété Simulation Space vous permet donc de spécifier si votre particule doit être considérée comme évoluant dans l’espace local au système de particules (valeur Local) ou bien si, une fois émise, elle doit être simulée comme un objet indépendant des transformations du système de particules (World).
+
+------------------------
+Question 6 - Good answer
+------------------------
+Quel est le nom du moteur de particules utilisé dans Unity ?
+[Well done, you got it right] Shuriken
+Beast
+PhysX
+
+Unity inclut le moteur de systèmes de particules Shuriken. Ce dernier tire son nom du fait que la plupart des particules sont des textures plaquées sur des plans évoluant de manière parallèle, à l’instar d’étoiles de ninjas à projeter : les Shuriken.
+
+------------------------
+Question 7 - Good answer
+------------------------
+Quel est le nom du composant me permettant facilement de réaliser une traînée derrière un objet en mouvement ?
+Mesh Renderer
+[Well done, you got it right] Trail Renderer
+Mesh Filter
+Sphere Collider
+
+Le Trail Renderer permet en effet de simuler aisément une traînée derrière un objet en mouvement. Vous pouvez utiliser un dégradé de couleurs pour rendre cet effet encore plus marquant.
+
+------------------------
+Question 8 - Good answer
+------------------------
+Qu’est-ce qu’un Material dans Unity ?
+Un moyen de définir les propriétés de friction et de rebond des surfaces entre elles
+[Well done, you got it right] Une instanciation des propriétés exposées par un shader
+Un composant permettant d’afficher un objet
+
+Un shader permet de définir un certain nombre de propriétés paramétrables modifiant l’aspect visuel d’un objet. Un Material est un choix possible de valeurs pour chacune de ces propriétés. On stocke souvent chaque Material utilisé dans un jeu sous forme de fichier.
+
+------------------------
+Question 9 - Good answer
+------------------------
+Quel type de shader proposé par défaut dans Unity pouvez-vous utiliser pour obtenir un effet de surbrillance de la source lumineuse sur la surface ?
+Unlit Texture
+[Well done, you got it right] Specular
+Diffuse
+Bumped Diffuse
+
+En effet, le shader Specular permet de spécifier une couleur ainsi qu’une intensité de brillance.
+
+------------------------
+Question 10 - Good answer
+------------------------
+Quel type de shader proposé par défaut dans Unity pouvez-vous utiliser pour obtenir une surface creusée de sillons, sans pour autant augmenter le nombre de sommets du Mesh utilisé ?
+Unlit Texture
+Specular
+Diffuse
+[Well done, you got it right] Bumped Diffuse
+
+Le shader Bumped Diffuse permet de spécifier une Normal Map, permettant de représenter par une texture les détails de la forme de la surface.    
+
+
+
+#################################################
+Partie 5 ACTIVITE /14
+#################################################
+
+Lancement du jeu /1
+- 1 : Le jeu se lance sans problème.
+- 0 : Un problème survient au lancement, ou l'archive ne contient pas les fichiers attendus.
+Durée totale de jeu et nombre de niveaux /3
+- 3 : Supérieure à 3 minutes et avec 3 niveaux de jeu
+- 2 : Entre 2 et 3 minutes avec 2 ou 3 niveaux de jeu
+- 1 : Entre 1 et 2 minutes avec 1, 2 ou 3 niveaux de jeu
+- 0 : Moins d'1 minute
+Présence d'écran de présentation et de menu /2
+- 2 : Les écrans de présentation et de menu sont présents et tout le contenu est correctement affiché.
+- 1 : Les écrans de présentation sont présents, mais selon le format, des éléments importants comme du texte ou des logos se retrouvent coupés ou masqués.
+- 0 : Il n'y a pas d'écran de présentation ni de menu.
+Aspect visuel /3
+- 3 : Chaque niveau de jeu présente des effets de particules, une lightmap, et des parois texturées.
+- 2 : Il manque un des éléments cosmétiques requis.
+- 1 : Il manque deux des trois éléments cosmétiques requis.
+- 0 : Il n'y a aucun élément cosmétique.
+Difficulté progressive /2
+- 2 : La difficulté augmente progressivement d'un niveau à l'autre.
+- 1 : La difficulté varie, mais de manière brutale.
+- 0 : Aucune variation dans la difficulté du jeu en allant d'un niveau à l'autre.
+Impression générale /3
+- 3 : Dans l'ensemble, le jeu est divertissant, graphiquement cohérent, et donne envie d'en voir plus.
+- 2 : Le jeu respecte les critères, mais manque de fun.
+- 1 : Le jeu peut à peine être fini, à cause d'une difficulté trop importante ou bien de situations bloquantes obligeant à relancer le jeu depuis le début.
+- 0 : Le jeu ne peut pas être terminé (pour des raisons techniques ou de difficulté trop élevée).
+
+
+#################################################
+Partie 5 QUIZZ /10
+#################################################
+
+------------------------
+Question 1 - Good answer
+------------------------
+Quel composant utilise-t-on pour pouvoir afficher du texte disposé dans notre espace 3D ?
+Text Renderer
+Text Filter
+[Well done, you got it right] Text Mesh
+
+Le composant Text Mesh nous permet en effet de préciser dans ses propriétés la chaîne de caractères à afficher, le pivot de cette dernière, la taille des caractères, etc. Associé au composant Mesh Renderer disposé sur le même GameObject, il permet de positionner du texte n’importe où sur notre scène.    
+
+------------------------
+Question 2 - Good answer
+------------------------
+Pour qu’une scène puisse être chargée dans mon jeu, dans quelle fenêtre faut-il l’ajouter ?
+[Well done, you got it right] Build Settings
+Player Settings
+Physics Settings
+LightMapping
+
+Il faut en effet ajouter toutes les scènes qui seront utilisées dans votre jeu à l’intérieur de la fenêtre Build Settings. De plus, la première scène en haut de la liste sera celle chargée au lancement de votre jeu.
+
+------------------------
+Question 3 - Good answer
+------------------------
+Lorsque le format d’écran change, qu’est-ce qui reste invariant dans Unity ?
+[Well done, you got it right] La hauteur filmée par la caméra
+La longueur filmée par la caméra
+La diagonale filmée par la caméra
+
+Quel que soit le format d’écran choisi, seul les bords droite et gauche de votre écran se verront plus proches ou éloignées du centre de votre écran. Les bords haut et bas resteront les mêmes quoi qu’il se passe.
+
+------------------------
+Question 4 - Good answer
+------------------------
+Quel format d’écran est utilisé lorsque parle d’écran Full HD ou HD Ready ?
+5/4
+4/3
+16/10
+[Well done, you got it right] 16/9
+
+En effet lorsqu’on parle d’écrans Full HD, on fait référence à la résolution 1920x1080 pixels. De même, HD Ready fait référence à la résolution 1280/720. Ces deux résolutions correspondent à un format d’écran 16/9.    
+
+------------------------
+Question 5 - Good answer
+------------------------
+En l’absence de repositionnement, imaginons qu’une interface ait été conçue pour un format 4/3. Dans lequel des formats suivants existe-t-il un risque de voir des éléments de cette interface disparaitre ?
+16/9
+16/10
+[Well done, you got it right] 5/4
+
+En effet, les bords droit et gauche de l’écran se verront plus proche du centre de l’écran en 5/4 qu’en 4/3. Ainsi, si des éléments d’interface sont proches voire collés à ces bords, ils se retrouveront en partie ou totalement invisibles.
+
+------------------------
+Question 6 - Good answer
+------------------------
+Que ne pourra-t-on pas modifier avec la version gratuite d’Unity lors de l’export du jeu ?
+Le format d’écran
+[Well done, you got it right] L’apparition d’un logo Unity au démarrage du jeu
+Les touches que le joueur devra utiliser pour contrôler son personnage
+La résolution d’écran
+
+Utiliser la version gratuite d’Unity vous imposera de voir apparaitre brièvement au démarrage de votre jeu le logo d’Unity. Avec la version professionnelle d’Unity, vous pouvez spécifier le logo de votre choix.
+
+------------------------
+Question 7 - Good answer
+------------------------
+Que faut-il installer en plus d’Unity et des drivers de son téléphone Android pour pouvoir déployer son jeu sur ce dernier ?
+[Well done, you got it right] L’Android SDK
+L’Android API
+L’Android Package
+L’Android Store
+
+En effet l’Android SDK (Software Development Kit) est un ensemble d’outils et bibliothèques nécessaires pour permettre à Unity d’exporter votre jeu sur votre téléphone Android.
+
+------------------------
+Question 8 - Good answer
+------------------------
+Quel est le nom du logiciel à manipuler en plus d’Unity à chaque fois que l’on souhaite déployer son jeu sur son téléphone Android ?
+XCode
+[Well done, you got it right] Aucun, Unity peut déployer directement votre jeu sur votre téléphone
+Android SDK
+
+En effet, déployer votre jeu sur votre téléphone Android est très simple et une fois le SDK Android configuré après sa première installation, toutes les actions nécessaires se font directement dans Unity.
+
+------------------------
+Question 9 - Good answer
+------------------------
+Quel est le nom du logiciel à manipuler en plus d’Unity à chaque fois que l’on souhaite déployer son jeu sur son iPhone ou son iPad ?
+[Well done, you got it right] XCode
+Aucun, Unity peut déployer directement votre jeu sur votre iPhone ou iPad
+iTunes
+
+Déployer un jeu sur un périphérique iOS étant soumis à de nombreuses restrictions, il est obligatoire de passer systématiquement par XCode (outil proposé par Apple) à chaque fois que vous voudrez tester votre jeu directement sur votre iPhone ou iPad.
+
+------------------------
+Question 10 - Good answer
+------------------------
+À partir de quelle plateforme puis-je déployer mon jeu sur un périphérique iOS ?    
+[Well done, you got it right] Uniquement OSX
+Uniquement OSX et Windows
+OSX, Windows et Linux
+OSX, Windows, Linux, Android et iOS
+
+Comme précédemment précisé, il est nécessaire d’utiliser XCode en plus d’Unity pour pouvoir déployer son jeu sur iOS. Or XCode n’est disponible pour l’instant que sous le système d’exploitation OSX d’Apple.    
+
