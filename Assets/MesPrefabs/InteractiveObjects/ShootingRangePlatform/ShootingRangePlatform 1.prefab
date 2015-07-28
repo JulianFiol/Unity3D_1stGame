@@ -402,9 +402,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _events:
   - {fileID: 11426338}
-  _maxTriggeredCount: 2147483647
+  _maxTriggeredCount: 0
   _delay: 0
-  _repeatDelay: 2
+  _repeatDelay: .5
   _repeated: 1
   _repeatCounts: 0
   _repeatCountsBounded: 0
@@ -425,7 +425,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: _repeatDelay
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _maxTriggeredCount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 196636}

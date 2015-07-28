@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 493076}
   - 65: {fileID: 6545978}
   - 114: {fileID: 11427734}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ActivationZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ GameObject:
   - 23: {fileID: 2394678}
   - 54: {fileID: 5495062}
   - 114: {fileID: 11454326}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - 4: {fileID: 412514}
   - 114: {fileID: 11464264}
   - 114: {fileID: 11471048}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: UnstablePlatform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -63,7 +63,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 22483850}
   - 222: {fileID: 22214798}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: PlatformOriginalLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 188734}
